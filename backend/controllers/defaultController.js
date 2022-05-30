@@ -21,7 +21,7 @@ export const create = (req, res) => {
       }
     );
   } catch (err) {
-    console.log(`Ocurrión un error update ${err}`);
+    console.log(`Ocurrión un error create ${err}`);
   }
 };
 
@@ -57,7 +57,7 @@ export const deleteRegister = (req, res) => {
       }
     );
   } catch (err) {
-    console.log(`Ocurrión un error update ${err}`);
+    console.log(`Ocurrión un error deleteRegister ${err}`);
   }
 };
 
@@ -109,7 +109,7 @@ export const searchBy = (req, res) => {
       }
     );
   } catch (err) {
-    console.log(`Ocurrión un error update ${err}`);
+    console.log(`Ocurrión un error searchBy ${err}`);
   }
 };
 
