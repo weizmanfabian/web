@@ -1,29 +1,29 @@
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "../pages/Home";
+import Index from "../pages/Index";
 import AplicationRoute from "./AplicationRoute";
 import AuthRoute from "./AuthRoute";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 
-const isLogged = false
-
 //router principal
 const PrincipalRoute = () => {
 
+    const [user, setUser] = useState(sessionStorage.data ? JSON.parse(sessionStorage.data) : '');
 
     return (
         <BrowserRouter>
             <Routes>
 
                 {/* página principal */}
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Index />} />
 
                 {/* rutas públicas */}
                 <Route
                     path="/auth/*"
                     element={
-                        <PublicRoute isLogged={isLogged}>
-                            <AuthRoute />
+                        <PublicRoute isLogged={user}>
+                            <AuthRoute setUser={setUser} />
                         </PublicRoute>
                     }
                 />
@@ -32,8 +32,8 @@ const PrincipalRoute = () => {
                 <Route
                     path="/app/*"
                     element={
-                        <PrivateRoute isLogged={isLogged}>
-                            <AplicationRoute />
+                        <PrivateRoute isLogged={user}>
+                            <AplicationRoute user={user} setUser={setUser} />
                         </PrivateRoute>
                     }
                 />
