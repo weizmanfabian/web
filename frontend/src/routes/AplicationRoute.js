@@ -1,11 +1,15 @@
 import { Route, Routes } from "react-router-dom";
 import HomeApp from "../pages/HomeApp";
+import Navbar from "../components/Navbar.js"
 
-const AplicationRoute = () => {
+const AplicationRoute = ({ user, setUser }) => {
     return (
-        <Routes>
-            <Route path="/home" element={<HomeApp />} />
-        </Routes>
+        <>
+            <Navbar user={user} setUser={setUser} />
+            <Routes>
+                <Route path="/home" element={<HomeApp user={user} />} />
+            </Routes>
+        </>
     );
 }
 

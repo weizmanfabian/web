@@ -1,6 +1,6 @@
-const HomeApp = () => {
+const HomeApp = ({ user }) => {
     return (
-        <h1>Estais en la app</h1>
+        <h1>Bienvenido {user.nombre} es un gusto tenerte con nosotros</h1>
     );
 }
 
