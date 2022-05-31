@@ -11,7 +11,6 @@ const HomeApp = ({ user }) => {
                     <img src={img} className="card-img-top" alt="Imagen" />
                     <div className="card-body">
                         <h1>Bienvenido {user.nombre} es un gusto tenerte con nosotros</h1>
-                        <p>Probando otro tipo de texto para la tipografía</p>
                     </div>
                 </div>
 
