@@ -6,10 +6,10 @@ autenticacion de usuarios
 2. Ir a ./backend/config.js y configurar la conexión a la base de datos
 
 ## Start
-cd frontend
-npm install
+cd frontend =>
+npm install => 
 npm start
 
-cd backend
-npm install
+cd backend => 
+npm install =>
 npm start
