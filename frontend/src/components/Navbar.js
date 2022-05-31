@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const styleList = {
   width: '.5em',
@@ -23,19 +23,19 @@ const Navbar = ({ user, setUser }) => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a className="navbar-brand" href="#">Hidden brand</a>
+          <Link className="navbar-brand" to="/app/home">Home</Link>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Home</a>
+              <Link className="nav-link active" aria-current="page" to="/app/uploadImage">Cargar Imagen</Link>
             </li>
           </ul>
           {/* Usuario de sesión */}
           <div className="collapse navbar-collapse d-flex justify-content-end " id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item dropdown ">
-                <a
+                <Link
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  to="#"
                   id="navbarDarkDropdownMenuLink"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -43,7 +43,7 @@ const Navbar = ({ user, setUser }) => {
                 >
                   {`${user.nombre} ${user.ape}`}
                   <i className="fas fa-user-tie" />
-                </a>
+                </Link>
                 <ul
                   className="dropdown-menu dropdown-menu-dark  dropdown-menu-end"
                   aria-labelledby="navbarDarkDropdownMenuLink"
