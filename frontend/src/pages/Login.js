@@ -79,7 +79,7 @@ const Login = ({ setUser }) => {
                             <button className="w-100 btn btn-lg btn-primary" type="submit">
                                 Iniciar Sesión
                             </button>
-                            <p className="mt-5 mb-3 text-muted">&copy;2022</p>
+                            <p className="mt-5 mb-3 text-muted">Weizman &copy; 2022</p>
                         </form>
                         <h1>{loginStatus}</h1>
                     </main>
